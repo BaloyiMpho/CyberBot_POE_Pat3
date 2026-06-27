@@ -27,8 +27,8 @@ public partial class MainWindow : Window
         _respondingServices = new RespondingServices();
         _audioPlayer = new AudioPlayer();
         AddMessage(_userProfile.GetArt(), false);
-        AddMessage(_Bot( "Welcome to chatbot\nType: add task - task title\nremind me to update password\nto complete a task type: done 1 or complete 2\nto delete a task, type delete 1 or remove 1\nType: show"
-), false);
+        AddMessage( "Welcome to chatbot\nType: add task - task title\nremind me to update password\nto complete a task type: done 1 or complete 2\nto delete a task, type delete 1 or remove 1\nType: show"
+, false);
         _audioPlayer.Greetings();
 
     }
