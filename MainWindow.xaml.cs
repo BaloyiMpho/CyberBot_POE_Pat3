@@ -1,12 +1,13 @@
-﻿using System;
+﻿using CyberBot_POE.Models;
+using CyberBot_POE.Services;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Threading.Tasks;
-using CyberBot_POE.Services;
-using CyberBot_POE.Models;
+using static System.Net.Mime.MediaTypeNames;
 
 
 
@@ -26,11 +27,17 @@ public partial class MainWindow : Window
         _respondingServices = new RespondingServices();
         _audioPlayer = new AudioPlayer();
         AddMessage(_userProfile.GetArt(), false);
+        AddMessage(_Bot( "Welcome to chatbot\nType: add task - task title\nremind me to update password\nto complete a task type: done 1 or complete 2\nto delete a task, type delete 1 or remove 1\nType: show"
+), false);
         _audioPlayer.Greetings();
+
     }
 
+    private string _Bot(string text)
+    {
+        return _respondingServices.GetResponse(text);
+    }
 
-    
     private async void Button2_Click(object sender, RoutedEventArgs e)
     {
 
