@@ -1,6 +1,4 @@
-﻿
-
-using CyberBot_POE.Models;
+﻿using CyberBot_POE.Models;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -11,7 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace CyberBot_POE;
+namespace CyberBot_POE
 {
     public partial class MainWindow : Window
     {

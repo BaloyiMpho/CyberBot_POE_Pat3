@@ -55,11 +55,11 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBox x:Name="inputMessage"
+                        <TextBox x:Name="MessageInput"
                              BorderThickness="0"
                              Foreground="Black"
                              Text="Send a message..." 
-                             VerticalAlignment="Center" Background="#FFAFAFAF" />
+                             VerticalAlignment="Center" Background="#FFAFAFAF" TextChanged="inputMessage_TextChanged" />
 
                         <Button Content="➤" 
                             Foreground="White" 
